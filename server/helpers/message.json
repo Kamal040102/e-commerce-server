@@ -1,0 +1,19 @@
+{
+    "SELLER_NOT_CREATED": "Seller couldn't be created.",
+    "SELLER_CREATED": "Seller created.",
+    "SELLER_NOT_DELETED": "Seller couldn't be deleted.",
+    "SELLER_DELETED": "Seller deleted.",
+    "SELLER_UPDATED": "Seller details has been updated.",
+    "SELLER_NOT_UPDATED": "Seller details couldn't be updated.",
+    "SELLER_FOUND": "Seller listed.",
+    "SELLER_NOT_FOUND": "Seller not found.",
+    "PRODUCT_CREATED": "Product has been added to the list.",
+    "PRODUCT_NOT_CREATED": "Couldn't add product to the list.",
+    "PRODUCT_UPDATED": "Product details has been updated.",
+    "PRODUCT_NOT_UPDATED": "Couldn't update product details.",
+    "PRODUCT_DELETED": "Product details has been deleted.",
+    "PRODUCT_NOT_DELETED": "Couldn't delete product details.",
+    "PRODUCT_FOUND": "Product details has been listed.",
+    "PRODUCT_NOT_FOUND": "Product not found.",
+    "ALL_PRODUCT_LISTED": "All products details has been listed."
+}
