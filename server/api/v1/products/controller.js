@@ -66,14 +66,16 @@ exports.index = expressAsyncHandler(async (req, res) => {
 })
 
 exports.indexAll = expressAsyncHandler(async (req, res) => {
-    try {
-        const indexProducts = await Product.find().populate("seller")
-
-        if (indexProducts.length > 0) {
-            res.status(201).send(util.apiResponse(1, toast.ALL_PRODUCT_LISTED, indexProducts))
-        } else {
-            res.status(409).send(util.apiResponse(0, toast.PRODUCT_NOT_FOUND))
+    let query = {};
+    if (req.query.query) {
+        query.product_name = {
+            "$regex": `${req.query.query}`,
+            '$options': 'i'
         }
+    }
+    try {
+        const indexProducts = await Product.find(query).populate("seller")
+        res.status(201).send(util.apiResponse(1, toast.ALL_PRODUCT_LISTED, indexProducts))
     }
     catch (err) {
         res.status(500).send(util.apiResponse(0, err.message))
