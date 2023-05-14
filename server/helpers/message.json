@@ -15,5 +15,6 @@
     "PRODUCT_NOT_DELETED": "Couldn't delete product details.",
     "PRODUCT_FOUND": "Product details has been listed.",
     "PRODUCT_NOT_FOUND": "Product not found.",
+    "CART_PRODUCT_LISTED": "Cart product listed.",
     "ALL_PRODUCT_LISTED": "All products details has been listed."
 }

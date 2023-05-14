@@ -21,3 +21,9 @@ exports.update = {
         seller: Joi.string()
     })
 }
+
+exports.cartItems = {
+    body: Joi.object().keys({
+        productIds: Joi.array().min(1)
+    })
+}

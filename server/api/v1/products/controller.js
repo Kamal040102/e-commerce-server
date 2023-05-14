@@ -75,7 +75,18 @@ exports.indexAll = expressAsyncHandler(async (req, res) => {
     }
     try {
         const indexProducts = await Product.find(query).populate("seller")
-        res.status(201).send(util.apiResponse(1, toast.ALL_PRODUCT_LISTED, indexProducts))
+        res.status(200).send(util.apiResponse(1, toast.ALL_PRODUCT_LISTED, indexProducts))
+    }
+    catch (err) {
+        res.status(500).send(util.apiResponse(0, err.message))
+    }
+})
+
+exports.cartItems = expressAsyncHandler(async (req, res) => {
+    const data = req.body;
+    try {
+        const cartProducts = await Product.find({ _id: data.productIds })
+        res.status(200).send(util.apiResponse(1, toast.CART_PRODUCT_LISTED, cartProducts))
     }
     catch (err) {
         res.status(500).send(util.apiResponse(0, err.message))
