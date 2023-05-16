@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start_local": "env-cmd -f ./config/env/.env.local nodemon index.js",
-    "start_dev": "env-cmd -f ./config/env/.env.dev node index.js"
+    "start_dev": "env-cmd -f ./config/env/.env.dev node index.js",
+    "start_demo": "env-cmd -f ./config/env/.env.dev node index.js"
   },
   "keywords": [],
   "author": "",
